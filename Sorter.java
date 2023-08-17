@@ -6,11 +6,11 @@ import java.util.stream.Collectors;
 public class Sorter {
     public static String processArray(String[] inputArray) {
         return Arrays.stream(inputArray)
-                .flatMap(s -> Arrays.stream(s.split(", "))) // Розбиваємо рядок на числа
-                .map(Integer::parseInt) // Перетворюємо на цілі числа
-                .sorted() // Сортуємо числа
-                .map(String::valueOf) // Перетворюємо назад на рядки
-                .collect(Collectors.joining(", ")); // З'єднуємо рядки через кому
+                .flatMap(s -> Arrays.stream(s.split(", ")))
+                .map(Integer::parseInt) 
+                .sorted() 
+                .map(String::valueOf)
+                .collect(Collectors.joining(", ")); 
     }
 
     public static void main(String[] args) {
